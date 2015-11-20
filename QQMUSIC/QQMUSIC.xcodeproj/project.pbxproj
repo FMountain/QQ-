@@ -16,6 +16,8 @@
 		04FE13FB1BFEE09B000CCCEC /* QQMUSICTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE13FA1BFEE09B000CCCEC /* QQMUSICTests.m */; };
 		04FE14061BFEE09B000CCCEC /* QQMUSICUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE14051BFEE09B000CCCEC /* QQMUSICUITests.m */; };
 		04FE14141BFEE335000CCCEC /* buyao.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FE14131BFEE335000CCCEC /* buyao.wav */; };
+		04FE14191BFEE963000CCCEC /* A3AudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE14181BFEE963000CCCEC /* A3AudioTool.m */; };
+		04FE141B1BFEED5B000CCCEC /* dawang.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FE141A1BFEED5B000CCCEC /* dawang.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		04FE14051BFEE09B000CCCEC /* QQMUSICUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQMUSICUITests.m; sourceTree = "<group>"; };
 		04FE14071BFEE09B000CCCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04FE14131BFEE335000CCCEC /* buyao.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buyao.wav; sourceTree = "<group>"; };
+		04FE14171BFEE963000CCCEC /* A3AudioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A3AudioTool.h; sourceTree = "<group>"; };
+		04FE14181BFEE963000CCCEC /* A3AudioTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A3AudioTool.m; sourceTree = "<group>"; };
+		04FE141A1BFEED5B000CCCEC /* dawang.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dawang.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +124,9 @@
 		04FE13E01BFEE09B000CCCEC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04FE14161BFEE936000CCCEC /* Tools */,
 				04FE14131BFEE335000CCCEC /* buyao.wav */,
+				04FE141A1BFEED5B000CCCEC /* dawang.wav */,
 				04FE13E11BFEE09B000CCCEC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +148,15 @@
 				04FE14071BFEE09B000CCCEC /* Info.plist */,
 			);
 			path = QQMUSICUITests;
+			sourceTree = "<group>";
+		};
+		04FE14161BFEE936000CCCEC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				04FE14171BFEE963000CCCEC /* A3AudioTool.h */,
+				04FE14181BFEE963000CCCEC /* A3AudioTool.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FE141B1BFEED5B000CCCEC /* dawang.wav in Resources */,
 				04FE13F01BFEE09B000CCCEC /* LaunchScreen.storyboard in Resources */,
 				04FE14141BFEE335000CCCEC /* buyao.wav in Resources */,
 				04FE13ED1BFEE09B000CCCEC /* Assets.xcassets in Resources */,
@@ -277,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FE14191BFEE963000CCCEC /* A3AudioTool.m in Sources */,
 				04FE13E81BFEE09B000CCCEC /* ViewController.m in Sources */,
 				04FE13E51BFEE09B000CCCEC /* AppDelegate.m in Sources */,
 				04FE13E21BFEE09B000CCCEC /* main.m in Sources */,

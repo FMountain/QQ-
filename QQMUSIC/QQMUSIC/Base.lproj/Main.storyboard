@@ -20,9 +20,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-t7-Mps">
                                 <rect key="frame" x="25" y="39" width="119" height="43"/>
                                 <animations/>
-                                <state key="normal" title="播放音效"/>
+                                <state key="normal" title="不要音效"/>
                                 <connections>
                                     <action selector="clickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQh-N4-Dgb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-ht-SBQ">
+                                <rect key="frame" x="30" y="176" width="119" height="43"/>
+                                <animations/>
+                                <state key="normal" title="大王音效"/>
+                                <connections>
+                                    <action selector="dawangClickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcq-bY-poY"/>
                                 </connections>
                             </button>
                         </subviews>

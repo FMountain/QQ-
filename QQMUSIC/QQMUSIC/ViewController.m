@@ -7,29 +7,32 @@
 //
 
 #import "ViewController.h"
-#import <AVFoundation/AVFoundation.h>
+#import "A3AudioTool.h"
 
 @interface ViewController ()
-
+/** 字典保存所有声音的ID 之后懒加载 */
+@property (nonatomic, assign) NSMutableDictionary *soundIds;
 @end
 
 @implementation ViewController
+#pragma mark - lazy
+- (NSMutableDictionary *)soundIds
+{
+    if (_soundIds == nil) {
+        _soundIds = [NSMutableDictionary dictionary];
+    }
+    return _soundIds;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (IBAction)clickBtn:(UIButton *)sender {
-    
-    //1.定义 ID
-    SystemSoundID soundId = 0;
-    
-    //2.根据音效文件Url 给SystemSoundID 赋值
-    CFURLRef url = (__bridge CFURLRef)([[NSBundle mainBundle] URLForResource:@"buyao.wav" withExtension:nil]);
-    AudioServicesCreateSystemSoundID(url, &soundId);
-    
-    //3.播放音效
-    AudioServicesPlaySystemSound(soundId);
+    [A3AudioTool playSoundWithSoundName:@"buyao.wav"];
+}
+- (IBAction)dawangClickBtn:(UIButton *)sender {
+    [A3AudioTool playSoundWithSoundName:@"dawang.wav"];
 }
 
 
