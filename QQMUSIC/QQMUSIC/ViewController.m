@@ -9,30 +9,31 @@
 #import "ViewController.h"
 #import "A3AudioTool.h"
 
+
 @interface ViewController ()
-/** 字典保存所有声音的ID 之后懒加载 */
-@property (nonatomic, assign) NSMutableDictionary *soundIds;
+
 @end
 
 @implementation ViewController
-#pragma mark - lazy
-- (NSMutableDictionary *)soundIds
-{
-    if (_soundIds == nil) {
-        _soundIds = [NSMutableDictionary dictionary];
-    }
-    return _soundIds;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
-- (IBAction)clickBtn:(UIButton *)sender {
-    [A3AudioTool playSoundWithSoundName:@"buyao.wav"];
+
+- (IBAction)playClickBtn:(id)sender {
+    [A3AudioTool playMusicWithMusicName:@"120.mp3"];
+
 }
+
 - (IBAction)dawangClickBtn:(UIButton *)sender {
-    [A3AudioTool playSoundWithSoundName:@"dawang.wav"];
+    [A3AudioTool pauseMusicWithMusicName:@"120.mp3"];
+
+    
+}
+
+- (IBAction)stopClickBtn:(UIButton *)sender {
+    [A3AudioTool stopMusicWithMusicName:@"120.mp3"];
 }
 
 

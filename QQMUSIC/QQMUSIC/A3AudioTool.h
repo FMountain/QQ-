@@ -12,5 +12,13 @@
 
 @interface A3AudioTool : NSObject
 
+//播放音效
 + (void)playSoundWithSoundName:(NSString *)soundName;
+
+//播放音乐
++ (void)playMusicWithMusicName:(NSString *)musicName;
+//暂停音乐
++ (void)pauseMusicWithMusicName:(NSString *)musicName;
+//停止音乐
++ (void)stopMusicWithMusicName:(NSString *)musicName;
 @end

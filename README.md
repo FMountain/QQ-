@@ -65,3 +65,13 @@
 	@property (nonatomic, assign) NSMutableDictionary *soundIds;
 	//播放音效
 	[A3AudioTool playSoundWithSoundName:@"buyao.wav"];
+## <a></a>4.播放音乐工具类的使用
+	//播放音乐
+	+ (void)playMusicWithMusicName:(NSString *)musicName;
+	//暂停音乐
+	+ (void)pauseMusicWithMusicName:(NSString *)musicName;
+	//停止音乐
+	+ (void)stopMusicWithMusicName:(NSString *)musicName;
+	-----------
+	+.m播放音乐 
+	 [A3AudioTool playMusicWithMusicName:@"120.mp3"];

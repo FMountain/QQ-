@@ -17,20 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-t7-Mps">
-                                <rect key="frame" x="25" y="39" width="119" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-ht-SBQ">
+                                <rect key="frame" x="30" y="106" width="119" height="43"/>
                                 <animations/>
-                                <state key="normal" title="不要音效"/>
+                                <state key="normal" title="暂停音乐"/>
                                 <connections>
-                                    <action selector="clickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQh-N4-Dgb"/>
+                                    <action selector="dawangClickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEU-U5-8cD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-ht-SBQ">
-                                <rect key="frame" x="30" y="176" width="119" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIe-FU-tJq">
+                                <rect key="frame" x="30" y="183" width="119" height="46"/>
                                 <animations/>
-                                <state key="normal" title="大王音效"/>
+                                <state key="normal" title="停止音乐"/>
                                 <connections>
-                                    <action selector="dawangClickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcq-bY-poY"/>
+                                    <action selector="stopClickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SjY-6q-OQq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDQ-t7-Mps">
+                                <rect key="frame" x="30" y="44" width="119" height="43"/>
+                                <animations/>
+                                <state key="normal" title="播放音乐"/>
+                                <connections>
+                                    <action selector="playClickBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGd-Au-e3h"/>
                                 </connections>
                             </button>
                         </subviews>

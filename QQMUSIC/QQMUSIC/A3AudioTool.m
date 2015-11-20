@@ -14,11 +14,15 @@
 @implementation A3AudioTool
 
 static NSMutableDictionary  *_soundIDs;
-+ (void)initialie
+static NSMutableDictionary  *_players;
+
++ (void)initialize
 {
-    _soundIDs= [NSMutableDictionary dictionary];
+    _soundIDs = [NSMutableDictionary dictionary];
+    _players  = [NSMutableDictionary dictionary];
 }
 
+//播放音效
 + (void)playSoundWithSoundName:(NSString *)soundName
 {
     //1.取出对应的 SystemSoundID
@@ -41,5 +45,53 @@ static NSMutableDictionary  *_soundIDs;
     //3.播放音效
     //    AudioServicesPlayAlertSound(soundID);//播放音效并震动
     AudioServicesPlaySystemSound(soundID);
+}
+
+//播放音乐
++ (void)playMusicWithMusicName:(NSString *)musicName
+{
+    //1.取出对应的播放器
+    AVAudioPlayer *player = _players[musicName];
+    
+    //2.如果为nil,则创建播放器
+    if ( player == nil) {
+        //获取资源的URL
+        NSURL *url = [[NSBundle mainBundle] URLForResource:musicName withExtension:nil];
+        
+        //根据url创建播放器
+        player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        
+        //将播放器保存到字典中
+        [_players setObject:player forKey:musicName];
+    }
+    
+    //3.播放音乐
+    [player play];
+}
+
+//暂停音乐
++ (void)pauseMusicWithMusicName:(NSString *)musicName
+{
+    //取出对应的播放器
+    AVAudioPlayer *player = _players[musicName];
+    
+    //2.判断是否为nil.,如果不为nil, 暂停音乐
+    if (player) {
+        [player pause];
+    }
+}
+
+//停止音乐
++ (void)stopMusicWithMusicName:(NSString *)musicName
+{
+    //取出对应的播放器
+    AVAudioPlayer *player = _players[musicName];
+    
+    //2.判断是否为nil.,如果不为nil, 停止音乐
+    if (player) {
+        [player stop];
+        //清空
+        [_players removeObjectForKey:musicName];
+    }
 }
 @end
