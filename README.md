@@ -7,7 +7,7 @@
  + [工具类的使用](#3)
 
 --
-#1.简单的播放音效
+## <a id ="1"></a>1.简单的播放音效
 	//1.定义 ID
     SystemSoundID soundId = 0;
     
@@ -18,7 +18,7 @@
     //3.播放音效
     AudioServicesPlaySystemSound(soundId);
     
-# 2. 播放音效封装成工具类
+## <a id ="2"></a>2. 播放音效封装成工具类
 + A3AudioTool.h
 	+ + (void)playSoundWithSoundName:(NSString *)soundName;
 + A3AudioTool.m
@@ -60,7 +60,7 @@
 		@end
 		
 		
-# 3.工具类的使用
+## <a id = "3"></a> 3.工具类的使用
 	+ //字典保存所有声音的ID 之后懒加载
 	@property (nonatomic, assign) NSMutableDictionary *soundIds;
 	//播放音效
