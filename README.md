@@ -1,4 +1,4 @@
-# QQ-
+# QQMusic-
 仿写QQ音乐
 # Contents
 --
